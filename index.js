@@ -5,38 +5,32 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var bodyParser = require('body-parser');
+var favicon = require('serve-favicon');
+
+var formRouter = require('./routes/form');
+var indexRouter = require('./routes/index');
+var resultRouter = require('./routes/result');
 
 var app = express();
+
+//ファビコンの設定
+app.use(favicon(__dirname + '/public/image/favicon.ico'));
 
 app.use(morgan('combined'));
 app.use(bodyParser.urlencoded({ extended: false}));
 
-app.use("/static",
-express.static(path.join(__dirname, "static")));
+app.use(
+express.static(path.join(__dirname, "public")));
 
-app.set('views', path.join(__dirname, 'templates'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-
-app.get("/", function(req, res) {
-  return res.render("index", {title: "Hello World"});
-});
-
-app.get("/form", function(req, res) {
-  return res.render("form");
-
-});
-
-
-app.post("/form", function(req, res) {
-  return res.render("result", {username:
-     req.body.username, message: req.body.message});
-});
+app.use('/form', formRouter);
+app.use('/', indexRouter);
+app.use('/result', resultRouter);
 
 
 var server = http.createServer(app);
-
-
 var port = 8000;
 server.listen(port);
 

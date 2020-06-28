@@ -1,5 +1,5 @@
 Arguments: 
-  /home/vagrant/.nvm/versions/node/v14.4.0/bin/node /home/vagrant/.yarn/bin/yarn.js add install body-parser save
+  /home/vagrant/.nvm/versions/node/v14.4.0/bin/node /home/vagrant/.yarn/bin/yarn.js remove express
 
 PATH: 
   /home/vagrant/.yarn/bin:/home/vagrant/.config/yarn/global/node_modules/.bin:/home/vagrant/.nvm/versions/node/v14.4.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -19,11 +19,14 @@ Trace:
 npm manifest: 
   {
     "dependencies": {
+      "body-parser": "^1.19.0",
       "ejs": "^3.1.3",
-      "express": "^4.17.1",
+      "express-favicon": "^2.0.1",
       "install": "^0.13.0",
       "morgan": "^1.10.0",
-      "pug": "^3.0.0"
+      "pug": "^3.0.0",
+      "save": "^2.4.0",
+      "serve-favicon": "^2.5.0"
     }
   }
 
@@ -94,6 +97,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/async/-/async-0.9.2.tgz#aea74d5e61c1f899613bf64bda66d4c78f2fd17d"
     integrity sha1-rqdNXmHB+JlhO/ZL2mbUx48v0X0=
   
+  async@^2.6.2:
+    version "2.6.3"
+    resolved "https://registry.yarnpkg.com/async/-/async-2.6.3.tgz#d72625e2344a3656e3a3ad4fa749fa83299d82ff"
+    integrity sha512-zflvls11DCy+dQWzTW2dzuilv8Z5X/pjfmZOWba6TNIVDm+2UDaJmXSOXlasHKfNBs8oo3M0aT50fDEWfKZjXg==
+    dependencies:
+      lodash "^4.17.14"
+  
   babel-walk@3.0.0-canary-5:
     version "3.0.0-canary-5"
     resolved "https://registry.yarnpkg.com/babel-walk/-/babel-walk-3.0.0-canary-5.tgz#f66ecd7298357aee44955f235a6ef54219104b11"
@@ -113,7 +123,7 @@ Lockfile:
     dependencies:
       safe-buffer "5.1.2"
   
-  body-parser@1.19.0:
+  body-parser@1.19.0, body-parser@^1.19.0:
     version "1.19.0"
     resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.19.0.tgz#96b2709e57c9c4e09a6fd66a8fd979844f69f08a"
     integrity sha512-dhEPs72UPbDnAQJ9ZKMNTP6ptJaionhP5cBb541nXPlW60Jepo9RV/a4fX4XWW9CuFNK22krhrj1+rgzifNCsw==
@@ -232,6 +242,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/doctypes/-/doctypes-1.1.0.tgz#ea80b106a87538774e8a3a4a5afe293de489e0a9"
     integrity sha1-6oCxBqh1OHdOijpKWv4pPeSJ4Kk=
   
+  duplexer@^0.1.1, duplexer@~0.1.1:
+    version "0.1.1"
+    resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
+    integrity sha1-rOb/gIwc5mtX0ev5eXessCM0z8E=
+  
   ee-first@1.1.1:
     version "1.1.1"
     resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
@@ -263,6 +278,24 @@ Lockfile:
     version "1.8.1"
     resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
     integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+  
+  event-stream@^4.0.1:
+    version "4.0.1"
+    resolved "https://registry.yarnpkg.com/event-stream/-/event-stream-4.0.1.tgz#4092808ec995d0dd75ea4580c1df6a74db2cde65"
+    integrity sha512-qACXdu/9VHPBzcyhdOWR5/IahhGMf0roTeZJfzz077GwylcDd90yOHLouhmv7GJ5XzPi6ekaQWd8AvPP2nOvpA==
+    dependencies:
+      duplexer "^0.1.1"
+      from "^0.1.7"
+      map-stream "0.0.7"
+      pause-stream "^0.0.11"
+      split "^1.0.1"
+      stream-combiner "^0.2.2"
+      through "^2.3.8"
+  
+  express-favicon@^2.0.1:
+    version "2.0.1"
+    resolved "https://registry.yarnpkg.com/express-favicon/-/express-favicon-2.0.1.tgz#6d852a1bc576ac72db006d3550cc09b23a96eef7"
+    integrity sha512-KZZF9lIUKU9lkyZM/7AVql7qeXA6EVkHCU5rGU4NvgbWNcYFn6zvCw3cwS5IY/vvP+MzVNVvBABnWfaVZoy7bQ==
   
   express@^4.17.1:
     version "4.17.1"
@@ -329,6 +362,11 @@ Lockfile:
     version "0.5.2"
     resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
     integrity sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=
+  
+  from@^0.1.7:
+    version "0.1.7"
+    resolved "https://registry.yarnpkg.com/from/-/from-0.1.7.tgz#83c60afc58b9c56997007ed1a768b3ab303a44fe"
+    integrity sha1-g8YK/Fi5xWmXAH7Rp2izqzA6RP4=
   
   has-flag@^3.0.0:
     version "3.0.0"
@@ -432,10 +470,20 @@ Lockfile:
       is-promise "^2.0.0"
       promise "^7.0.1"
   
-  lodash@^4.17.13:
+  lodash.assign@^4.2.0:
+    version "4.2.0"
+    resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
+    integrity sha1-DZnzzNem0mHRm9rrkkUAXShYCOc=
+  
+  lodash@^4.17.13, lodash@^4.17.14:
     version "4.17.15"
     resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
     integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  
+  map-stream@0.0.7:
+    version "0.0.7"
+    resolved "https://registry.yarnpkg.com/map-stream/-/map-stream-0.0.7.tgz#8a1f07896d82b10926bd3744a2420009f88974a8"
+    integrity sha1-ih8HiW2CsQkmvTdEokIACfiJdKg=
   
   media-typer@0.3.0:
     version "0.3.0"
@@ -468,6 +516,11 @@ Lockfile:
     version "1.6.0"
     resolved "https://registry.yarnpkg.com/mime/-/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
     integrity sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
+  
+  mingo@1:
+    version "1.3.3"
+    resolved "https://registry.yarnpkg.com/mingo/-/mingo-1.3.3.tgz#6922c4d147efc771a01425a2c4c8f7784478c546"
+    integrity sha1-aSLE0Ufvx3GgFCWixMj3eER4xUY=
   
   minimatch@^3.0.4:
     version "3.0.4"
@@ -519,7 +572,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/on-headers/-/on-headers-1.0.2.tgz#772b0ae6aaa525c399e489adfad90c403eb3c28f"
     integrity sha512-pZAE+FJLoyITytdqK0U5s+FIpjN0JP3OzFi/u8Rx+EV5/W+JTWGXG8xFzevE7AjBfDqHv/8vL8qQsIhHnqRkrA==
   
-  parseurl@~1.3.3:
+  parseurl@~1.3.2, parseurl@~1.3.3:
     version "1.3.3"
     resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.3.tgz#9da19e7bee8d12dff0513ed5b76957793bc2e8d4"
     integrity sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==
@@ -533,6 +586,13 @@ Lockfile:
     version "0.1.7"
     resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
     integrity sha1-32BBeABfUi8V60SQ5yR6G/qmf4w=
+  
+  pause-stream@^0.0.11:
+    version "0.0.11"
+    resolved "https://registry.yarnpkg.com/pause-stream/-/pause-stream-0.0.11.tgz#fe5a34b0cbce12b5aa6a2b403ee2e73b602f1445"
+    integrity sha1-/lo0sMvOErWqaitAPuLnO2AvFEU=
+    dependencies:
+      through "~2.3"
   
   promise@^7.0.1:
     version "7.3.1"
@@ -679,6 +739,11 @@ Lockfile:
     dependencies:
       path-parse "^1.0.6"
   
+  safe-buffer@5.1.1:
+    version "5.1.1"
+    resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
+    integrity sha512-kKvNJn6Mm93gAczWVJg7wH+wGYWNrDHdWvpUmHyEsgCtIwwo3bqPtV4tR5tuPaUhTOo/kvhVwd8XwwOllGYkbg==
+  
   safe-buffer@5.1.2:
     version "5.1.2"
     resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
@@ -688,6 +753,16 @@ Lockfile:
     version "2.1.2"
     resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
     integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
+  
+  save@^2.4.0:
+    version "2.4.0"
+    resolved "https://registry.yarnpkg.com/save/-/save-2.4.0.tgz#af93ff9b3d7a41d0aff49a23433870613a460f9b"
+    integrity sha512-wd5L2uVnsKYkIUaK6i8Ie66IOHaI328gMF0MPuTJtYOjXgUolC33LSIk7Qr8WVA55QHaGwfiVS8a7EFIeGOR3w==
+    dependencies:
+      async "^2.6.2"
+      event-stream "^4.0.1"
+      lodash.assign "^4.2.0"
+      mingo "1"
   
   send@0.17.1:
     version "0.17.1"
@@ -708,6 +783,17 @@ Lockfile:
       range-parser "~1.2.1"
       statuses "~1.5.0"
   
+  serve-favicon@^2.5.0:
+    version "2.5.0"
+    resolved "https://registry.yarnpkg.com/serve-favicon/-/serve-favicon-2.5.0.tgz#935d240cdfe0f5805307fdfe967d88942a2cbcf0"
+    integrity sha1-k10kDN/g9YBTB/3+ln2IlCosvPA=
+    dependencies:
+      etag "~1.8.1"
+      fresh "0.5.2"
+      ms "2.1.1"
+      parseurl "~1.3.2"
+      safe-buffer "5.1.1"
+  
   serve-static@1.14.1:
     version "1.14.1"
     resolved "https://registry.yarnpkg.com/serve-static/-/serve-static-1.14.1.tgz#666e636dc4f010f7ef29970a88a674320898b2f9"
@@ -723,10 +809,25 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.1.1.tgz#7e95acb24aa92f5885e0abef5ba131330d4ae683"
     integrity sha512-JvdAWfbXeIGaZ9cILp38HntZSFSo3mWg6xGcJJsd+d4aRMOqauag1C63dJfDw7OaMYwEbHMOxEZ1lqVRYP2OAw==
   
+  split@^1.0.1:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/split/-/split-1.0.1.tgz#605bd9be303aa59fb35f9229fbea0ddec9ea07d9"
+    integrity sha512-mTyOoPbrivtXnwnIxZRFYRrPNtEFKlpB2fvjSnCQUiAA6qAZzqwna5envK4uk6OIeP17CsdF3rSBGYVBsU0Tkg==
+    dependencies:
+      through "2"
+  
   "statuses@>= 1.5.0 < 2", statuses@~1.5.0:
     version "1.5.0"
     resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
     integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
+  
+  stream-combiner@^0.2.2:
+    version "0.2.2"
+    resolved "https://registry.yarnpkg.com/stream-combiner/-/stream-combiner-0.2.2.tgz#aec8cbac177b56b6f4fa479ced8c1912cee52858"
+    integrity sha1-rsjLrBd7Vrb0+kec7YwZEs7lKFg=
+    dependencies:
+      duplexer "~0.1.1"
+      through "~2.3.4"
   
   supports-color@^5.3.0:
     version "5.5.0"
@@ -734,6 +835,11 @@ Lockfile:
     integrity sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
     dependencies:
       has-flag "^3.0.0"
+  
+  through@2, through@^2.3.8, through@~2.3, through@~2.3.4:
+    version "2.3.8"
+    resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
+    integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
   
   to-fast-properties@^2.0.0:
     version "2.0.0"
