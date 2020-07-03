@@ -1,7 +1,282 @@
 　//ID　漢字　読み　意味
-INSERT INTO KEY_VALUE
-  (ID, jukugo, read, mean)
-  VALUES
+CREATE DATABASE yoji_jukugo;
+\c yoji_jukugo
+CREATE TABLE lists (id INTEGER PRIMARY KEY, jukugo char(4), read TEXT, mean TEXT);
+
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('1','悪戦苦闘','あくせんくとう','手ごわい相手との苦しい戦いのこと');
+//ここから
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('2','悪口雑言','あっこうぞうごん','言いたい放題色々な悪口を言うこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('3','暗中模索','あんちゅうもさく','どうすればいいかわからないままいろいろ考え試すこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('4','意気消沈','いきしょうちん','がっかりして、元気をなくしている様子のこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES 
+    ('5','意気投合','いきとうごう','気持ちが通じ合い親しくなること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('6','意気揚々','いきようよう','満足していて、ほこらしいげな様子のこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES    
+    ('7','異口同音','いくどうおん','みんなの意見や考えが同じであること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('8','以心伝心','いしんでんしん','言葉を使わなくてもお互いの気持ちが相手に伝わっていること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('9','一言居士','いちげんこじ','何かあるたびに、自分の意見をいわなければ気がすまない人のこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('10','一期一会','いちごいちえ','人との出会いは人生で一度かぎりであるという思い出そのきかいを大切にするべきであるということ');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('11','一日千秋','いちにちせんしゅう','１日をとても長く感じてしまうくらい待ち遠しいこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('12','一念発起','いちねんほっき','過去の考えをあらためて何かをなしとげようと決心すること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('13','一望千里','いちぼうせんり','のはらや山から見たけしきが、遠くまでみわたせるほどに開けていること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('14','一網打尽','いちもうだじん','わるい集団などを、一度にまとめてつかまえてしまうこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('15','一目瞭然','いちもくりょうぜん','ひとめ見ただけで明らかによくわかること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('16','一蓮托生','いちれんたくしょう','ほかの人と行動やうんめいを共にすること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('17','一攫千金','いっかくせんきん','わずかな苦労で一度におおもうけすること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('18','一喜一憂','いっきいちゆう','わずかに変わっただけでよろこんだり、心配したりしておちつかないこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('19','一騎当千','いっきとうせん','すぐれた才能やけいけんを持っていること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('20','一生懸命','いっしょうけんめい','ものごとに全力をつくすこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('21','一触即発','いっしょくそくはつ','ちょっとしたことで大きな事件などになりそうな、きけんなじょうたいにあること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('22','一進一退','いっしんいったい','じょうたいが良くなったり、わるくなったりすること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('23','一心同体','いっしんどうたい','２人以上の人が心も体も１つであるかのようにだんけつすること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('24','一心不乱','いっしんふらん','ほかのことに心がうばわれることなく、１つのことに集中すること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('25','一石二鳥','いっせきにちょう','１つの行いで同時に２つのりえきをえること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('26','因果応報','いんがおうほう','よいおこないやわるいおこないをすると、それにおうじたけっかがあること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('27','慇懃無礼','いんぎんぶれい','ていねいすぎてかえってぶれいであること、おもてではていねいにふるまっても、内心では相手を見下していること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('28','右往左往','うおうさおう','うろたえてこんらんして、あちらこちらに動き回ること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('29','海千山千','うみせんやません','長年いろんなけいけんをして、かなわないひとのこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('30','紆余曲折','うよきょくせつ','いろんなことがまざり、物ごとがふくざつであること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('31','雲散霧消','うんさんむしょう','雲やきりが消えるときのように、ものがあとかたもなく消えてしまうこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('32','岡目八目','おかめはちもく','関係のない人が、本人よりも物ごとを正しくはんだんできるということ');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('33','開口一番','かいこういちばん','口を開いて話を始めてすぐにということ');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('34','我田引水','がでんいんすい','自分に都合よく有利になるように行動したり言ったりすること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('35','冠婚葬祭','かんこんそうさい','慣習的におこなわれるぎしきのなまえのこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('36','完全無欠','かんぜんむけつ','足りないところが１つもなく完ぺきであること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('37','艱難辛苦','かんなんしんく','とてもつらい出来事に出会って、なやみ苦しむこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('38','危機一髪','ききいっぱつ','１つ間違えば大変なことになるようなきけんなじょうたいのこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('39','起死回生','きしかいせい','死にかけている人を生き返らせること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('40','起承転結','きしょうてんけつ','文章を書くときや物ごとを組み立てるときの順番のこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('41','喜色満面','きしょくまんめん','よろこびの感情が顔にみちあふれている様子のこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('42','奇想天外','きそうてんがい','ふだんでは思いつかないようなこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('43','急転直下','きゅうてんちょっか','行きづまっていたことが、一気に解決すること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('44','器用貧乏','きようびんぼう','器用なひ人は、かえってほかの人に利用されたり１つのことに集中できなくて不利なこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('45','興味津々','きょうみしんしん','後から後から興味がわいくる様子のこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('46','空前絶後','くうぜんぜつご','今までにも、これからもめったにないと思われるめずらしいこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('47','厚顔無恥','こうがんむち','はじ知らずでずうずうしいこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('48','広大無辺','こうだいむへん','果てしないほど広いこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('49','口頭試問','こうとうしもん','筆記試験とは違い、質問に対して口で直接話して答える試験のこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('50','荒唐無稽','こうとうむけい','言っていることや考えていることにこんきょがなく、でたらめなこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('51','公平無私','こうへいむし','片方にかたよったりせずに平等に物ごとを進めようとすること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('52','公明正大','こうめいせいだい','公平で、大きくどうどうとしていること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('53','古今東西','ここんとうざい','今も昔も、どんなところでもということ');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('54','孤立無援','こりつむえん','ひとりぼっちで、ほかの人からの手助けなどがないこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('55','言語道断','ごんごどうだん','言葉では言いあらわせないようなひどいこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('56','再三再四','さいさんさいし','くりかえし、何度も同じことをすること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('57','才色兼備','さいしょくけんび','すばらしいさいのうと美しい顔かたちの両方を持つ女性をほめる言葉');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('58','三寒四温','さんかんしおん','さむい日が３日続いたら、あたたかい日が４日続きそれがくり返される冬の気こうを表した言葉');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('59','三々五々','さんさんごご','数人ずつの人が行ったり、または集まってきたりすること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('60','山紫水明','さんしすいめい','山や川のけしきが美しい様子のこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('61','三拝九拝','さんぱいきゅうはい','何度も人に頭を下げること、そのようにして人に何かをたのむこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('62','自画自賛','じがじさん','自分や自分がしたこと作ったものを自分でほめること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('63','自給自足','じきゅうじそく','自分に必要なものをほかから手に入れずに自分で作ってまかなうこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('64','四苦八苦','しくはっく','思うようにならなくてとても苦しむこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('65','試行錯誤','しこうさくご','失敗をくり返しながらいろいろ試してみて物ごとを解決しようとすること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('66','自業自得','じごうじとく','自分が過去にした悪いことがもたらした結果を自分でうけること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('67','七転八起','しちてんはっき','なんども失敗しても、くじけずに立ち上がり行動し続けること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('68','弱肉強食','じゃくにくきょうしょく','弱いものは強いもののえじきとなってほろび、強いものがはん栄すること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('69','終始一貫','しゅうしいっかん','態度や考えが始めからおわりまで変わらないこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('70','十人十色','じゅうにんといろ','好みや考え方、性格などは人それぞれちがっていること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('71','主客転倒','しゅかくてんとう','物ごとの立場などを取り間違えること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('72','取捨選択','しゅしゃせんたく','良いものや必要なものをえらんで残し、悪いものやいらないものは捨てること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('73','順風満帆','じゅんぷうまんぱん','物ごとが自分の思い通りに、順調に進んでいくようすのたとえ');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('74','枝葉末節','しようまっせつ','物ごとの中心から外れている細かくてどうでもいい部分のこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('75','心機一転','しんきいってん','何かをきっかけにして、気持ちがすっかり変わること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('76','針小棒大','しんしょうぼうだい','小さなことを大げさにいうこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('77','森羅万象','しんらばんしょう','この世界にそんざいする、ありとあらゆるもののこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('78','晴耕雨読','せいこううどく','何かにわずらわされたりせず、思いのままにのんびりとした生活を送ること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('79','正々堂々','せいせいどうどう','ひきょうなことをせず、正しくしてどうどうとして態度をとること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('80','青天白日','せいてんはくじつ','心おだやかに暮らすこと、晴れた日には田んぼをたがやし、雨の日には家に引きこもって読書をすること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('81','絶体絶命','ぜったいぜつめい','逃げることのできない、さしせまった立場のこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('82','千差万別','せんさばんべつ','物ごとはさまざまな種類があって違いもいろいろということ');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('83','前人未踏','ぜんじんみとう','いまだかつてだれも成功していなかったこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('84','前代未聞','ぜんだいみもん','今までに聞いたことがないような驚くべきこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('85','先手必勝','せんてひっしょう','戦うときは相手よりも先にこうげきすればかならず勝てるということ');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('86','千変万化','せんぺんばんか','物ごとのじょうきょうやじょうたいがさまざまに変化すること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('87','大義名分','たいぎめいぶん','なにかの行動を起こすときにこんきょにする、だれもが正しいと思える理由のこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('88','大言壮語','たいげんそうご','自分の実力に合わない、できそうにないことをいうこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('89','泰然自若','たいぜんじじゃく','物ごとに動じず、落ち着きをはらっているようすのこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('90','大胆不敵','だいたんふてき','度きょうがあって、何事にも動じることがないこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('91','大同小異','だいどうしょうい','小さな違いであっても、全体を見れば同じだということ');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('92','他力本願','たりきほんがん','何かをする時に自分では努力しないで、ほかの人を当てにすること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('93','適材適所','てきざいてきしょ','その人のさいのうやせいかくにふさわしい仕事やくらいを与えること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('94','手前味噌','てまえみそ','自分で自分のしたことをほめること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('95','天真爛漫','てんしんらんまん','自分のことをかざらずありのままでいること、むじゃきで明るいこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('96','天変地異','てんぺんちい','自然界で起こる台風や地しんといった異変や災害のこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('97','当意即妙','とういそくみょう','その場のじょうきょうに合わせて、すばやく適切なたいおうをとること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('98','東奔西走','とうほんせいそう','仕事や目的のために、あちこちをいそがしくかけ回ること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('99','二束三文','にそくさんもん','ねだんがとても安いこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('100','日進月歩','にっしんげっぽ','とだえることなく急速に進歩していること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('101','破顔一笑','はがんいっしょう','表情がやわらいで、にっこりと笑うこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('102','博覧強記','はくらんきょうき','いろいろな本を読んでいて、その内容をしっかりと覚えている人、知識が豊富なひと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('103','八方美人','はっぽうびじん','だれからもよく思われたいと思っている人');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('104','波乱万丈','はらんばんじょう','物ごとの進み方などが、はげしい変化にとんでいること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('105','半死半生','はんしはんしょう','生きるか死ぬかのさかいめにあること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('106','半信半疑','はんしんはんぎ','しんじる気持ちとうたがう気持ちが半分ずつでしんじきれないで判断にまようこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('107','美辞麗句','びじれいく','うわべだけきれいにかざった聞いていて気分が良いが内容がない言葉のこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('108','百発尺中','ひゃっぱつしゃくちゅう','予想していたこと、計画していたことなどがすべて当たること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('109','不言実行','ふげんじっこう','あれこれ言わずに、やることをだまって実行すること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('110','不眠不休','ふみんふきゅう','休んだりねむったりしないで物ごとのをやり切ろうとすること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('111','平身低頭','へいしんていとう','物ごとをたのんだり、ゆるしてもらうためにひたすら頭を下げること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('112','本末転倒','ほんまつてんとう','大切なこととそうでないことをまちがえること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('113','満場一致','まんじょういっち','会議などの時に、その場にいる全員の意見がそろうこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('114','三日坊主','みっかぼうず','何をやっても長続きしない人');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('115','無我夢中','むがむちゅう','何かに熱中していて、われを忘れて行動すること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('116','無病息災','むびょうそくさい','病気に１つもかからないで、健康であること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('117','無味乾燥','むみかんそう','話の内容などに、おもしろさがかけていること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('118','無理難題','むりなんだい','とても実現できそうにないむずかしい要求');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('119','門外不出','もんがいふしゅつ','持ち出し、かし出しをゆるさないようなとても貴重なもの');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('120','問答無用','もんどうむよう','話し合っても意味がないこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('121','唯一無二','ゆいいつむに','世の中に１つしかない、かけがえのないもの');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('122','優柔不断','ゆうじゅうふだん','なかなか決められない人');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('123','勇猛果敢','ゆうもうかかん','勇かんで思い切った行動をすること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('124','悠々自適','ゆうゆうじてき','世の中ときょりをおいて、自分の思うとおりにのんびりと生活すること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('125','油断大敵','ゆだんたいてき','ゆだんしていると思わぬ失敗をすることがある、ゆだんしてはいけないということ');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('126','用意周到','よういしゅうとう','じゅんびや用意が行きとどいていて、足りないものがないこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('127','容姿端麗','ようしたんれい','女の人の体形や顔が美しいこと');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('128','利害得失','りがいとくしつ','得すること、そんすること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('129','離合集散','りごうしゅうさん','人や物が集まったりはなれたりすること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('130','立身出世','りっしんしゅっせ','社会にみとめられて、名声を得ること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('131','流言飛語','りゅうげんひご','周りに言いふらされているこんきょのないうわさ、デマ');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('132','理路整然','りろせいぜん','話や考えかたなどのすじ道が通っていること');
+INSERT INTO lists (ID, jukugo, read, mean) VALUES
+    ('133','老若男女','ろうにゃくなんにょ','年れいやせい別に関係なく、あらゆる全ての人のこと');
+
+SELECT ID
+    FROM lists
+    ORDER BY ID [ASC];
+
+
+
     (1,悪戦苦闘,あくせんくとう,手ごわい相手との苦しい戦いのこと)
     (2,悪口雑言,あっこうぞうごん,言いたい放題色々な悪口を言うこと)
     (3,暗中模索,あんちゅうもさく,どうすればいいかわからないままいろいろ考え試すこと)
