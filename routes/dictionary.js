@@ -4,15 +4,20 @@ var lists = require('../lib/lists');
 
 router.get("/", function(req, res) {
   
-  lists.findAll({
-    order: [['id', 'ASC']]
+  lists.findOne({
+    where: {
+      id: req.query.id
+    }
   }).then((result) => {
-    res.render("a", {
-      lists: result
+    var flag = result.read.slice(0,1);
+    
+    res.render("dictionary", {
+      list: result,
+      gyou: 
     });
 
   });
-  
+
 });
 
 

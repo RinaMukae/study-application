@@ -7,11 +7,22 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var favicon = require('serve-favicon');
 
-var formRouter = require('./routes/form');
+
 var indexRouter = require('./routes/index');
 var resultRouter = require('./routes/result');
 var selectRouter = require('./routes/select');
 var aRouter = require('./routes/a');
+var kaRouter = require('./routes/ka');
+var saRouter = require('./routes/sa');
+var taRouter = require('./routes/ta');
+var naRouter = require('./routes/na');
+var haRouter = require('./routes/ha');
+var maRouter = require('./routes/ma');
+var yaRouter = require('./routes/ya');
+var raRouter = require('./routes/ra');
+var dictionaryRouter = require('./routes/dictionary');
+
+
 
 var app = express();
 
@@ -30,11 +41,20 @@ express.static(path.join(__dirname, "public")));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use('/form', formRouter);
 app.use('/', indexRouter);
 app.use('/result', resultRouter);
 app.use('/select', selectRouter);
 app.use('/a', aRouter);
+app.use('/ka', kaRouter);
+app.use('/sa', saRouter);
+app.use('/ta', taRouter);
+app.use('/na', naRouter);
+app.use('/ha', haRouter);
+app.use('/ma', maRouter);
+app.use('/ya', yaRouter);
+app.use('/ra', raRouter);
+app.use('/dictionary', dictionaryRouter);
+
 
 var server = http.createServer(app);
 var port = 8000;

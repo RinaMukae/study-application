@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/stylesheets/index.css">
+  <title>四字熟語ドリル</title>
+</head>
+<body>
+  <div class="wrapper">
+  <div style ="text-align: center;">
+    <h1>四字熟語辞書</h1>
+  </div>
+  <div align ="center">
+  <h5>さくいん</h5>
+  <h2>索引</h2>
+  <a href="/a" class="btn-square-shadow">あ</a>
+  <a href="/ka" class="btn-square-shadow">か</a>
+  <a href="/sa" class="btn-square-shadow">さ</a>
+  <a href="/ta" class="btn-square-shadow">た</a>
+  <a href="/na" class="btn-square-shadow">な</a>
+  <a href="/ha" class="btn-square-shadow">は</a>
+  <a href="/ma" class="btn-square-shadow">ま</a>
+  <a href="/ya" class="btn-square-shadow">や</a>
+  <a href="/ra" class="btn-square-shadow">ら</a>
+
+  <p><%= list.jukugo%></p>
+  <p><%= list.read%></p>
+  <p><%= list.mean%></p>
+
+    
+<a href="/<%= gyou%>" class="btn-square-shadow">もどる</a>
+  </div>
+</body>
+</html>
