@@ -23,24 +23,24 @@
   <a href="/ma" class="btn-square-shadow">ま</a>
   <a href="/ya" class="btn-square-shadow">や</a>
   <a href="/ra" class="btn-square-shadow">ら</a>
-
+  
   
   <% for (var i=0; i < 133; i++) { %>
   <% var a = String(lists[i].read); %>
   <% var b = a.slice(0,1); %>
-  <% if (b.indexOf('あ') === 0) { %>
+  <% if (b.indexOf('は') === 0) { %>
   <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
   (<%= lists[i].read %>)</br>
-  <% }  else if(b.indexOf('い') === 0) {%>
+  <% }  else if(b.indexOf('ひ') === 0) {%>
   <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
   (<%= lists[i].read %>)</br>
-  <% }  else if(b.indexOf('う') === 0) {%>
+  <% }  else if(b.indexOf('ふ') === 0) {%>
   <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
   (<%= lists[i].read %>)</br>
-  <% }  else if(b.indexOf('え') === 0) {%>
+  <% }  else if(b.indexOf('へ') === 0) {%>
   <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
   (<%= lists[i].read %>)</br>
-  <% }  else if(b.indexOf('お') === 0) {%>
+  <% }  else if(b.indexOf('ほ') === 0) {%>
   <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
   (<%= lists[i].read %>)</br>
   <% } else {%>
