@@ -42,7 +42,21 @@
   <% }  else if(b.indexOf('そ') === 0) {%>
   <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
   (<%= lists[i].read %>)</br>
-  <% } else {%>
+  <% } else if (b.indexOf('ざ') === 0) { %>
+  <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
+  (<%= lists[i].read %>)</br>
+  <% }  else if(b.indexOf('じ') === 0) {%>
+  <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
+  (<%= lists[i].read %>)</br>
+  <% }  else if(b.indexOf('ず') === 0) {%>
+  <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
+  (<%= lists[i].read %>)</br>
+  <% }  else if(b.indexOf('ぜ') === 0) {%>
+  <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
+  (<%= lists[i].read %>)</br>
+  <% }  else if(b.indexOf('ぞ') === 0) {%>
+  <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
+  (<%= lists[i].read %>)</br>else {%>
   <!-- else-->
   <% } %>
   <% } %>
