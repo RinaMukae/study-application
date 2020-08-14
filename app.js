@@ -21,6 +21,8 @@ var maRouter = require('./routes/ma');
 var yaRouter = require('./routes/ya');
 var raRouter = require('./routes/ra');
 var dictionaryRouter = require('./routes/dictionary');
+var meantestRouter = require('./routes/meantest');
+var readtestRouter = require('./routes/readtest');
 
 
 
@@ -54,7 +56,8 @@ app.use('/ma', maRouter);
 app.use('/ya', yaRouter);
 app.use('/ra', raRouter);
 app.use('/dictionary', dictionaryRouter);
-
+app.use('/readtest', readtestRouter);
+app.use('/meantest', meantestRouter);
 
 var server = http.createServer(app);
 var port = 8000;
