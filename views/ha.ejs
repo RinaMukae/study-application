@@ -24,43 +24,43 @@
   <a href="/ya" class="btn-square-shadow">や</a>
   <a href="/ra" class="btn-square-shadow">ら</a>
   
-  
   <% for (var i=0; i < 133; i++) { %>
   <% var a = String(lists[i].read); %>
   <% var b = a.slice(0,1); %>
   <% if (b.indexOf('は') === 0) { %>
-  <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
+  <br><h3><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
   (<%= lists[i].read %>)</br>
   <% }  else if(b.indexOf('ひ') === 0) {%>
-  <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
+  <br><h3><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
   (<%= lists[i].read %>)</br>
   <% }  else if(b.indexOf('ふ') === 0) {%>
-  <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
+  <br><h3><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
   (<%= lists[i].read %>)</br>
   <% }  else if(b.indexOf('へ') === 0) {%>
-  <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
+  <br><h3><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
   (<%= lists[i].read %>)</br>
   <% }  else if(b.indexOf('ほ') === 0) {%>
-  <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
+  <br><h3><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
   (<%= lists[i].read %>)</br>
   <% } else if (b.indexOf('ば') === 0) { %>
-    <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
-    (<%= lists[i].read %>)</br>
-    <% }  else if(b.indexOf('び') === 0) {%>
-    <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
-    (<%= lists[i].read %>)</br>
-    <% }  else if(b.indexOf('ぶ') === 0) {%>
-    <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
-    (<%= lists[i].read %>)</br>
-    <% }  else if(b.indexOf('べ') === 0) {%>
-    <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
-    (<%= lists[i].read %>)</br>
-    <% }  else if(b.indexOf('ぼ') === 0) {%>
-    <br><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
-    (<%= lists[i].read %>)</br>　else {%>
-    <!-- else-->
-  <% } %>
-  <% } %>
+ <br><h3><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
+ (<%= lists[i].read %>)</br>
+ <% }  else if(b.indexOf('び') === 0) {%>
+ <br><h3><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
+ (<%= lists[i].read %>)</br>
+ <% }  else if(b.indexOf('ぶ') === 0) {%>
+ <br><h3><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
+ (<%= lists[i].read %>)</br>
+ <% }  else if(b.indexOf('べ') === 0) {%>
+ <br><h3><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
+ (<%= lists[i].read %>)</br>
+ <% }  else if(b.indexOf('ぼ') === 0) {%>
+ <br><h3><a href="/dictionary?id=<%= i+1%>"><%= lists[i].jukugo %></a>
+ (<%= lists[i].read %>)</br>
+ <%} else {%>
+  <!-- else-->
+<% } %>
+<% } %>
     
 <a href="/" class="btn-square-shadow">もどる</a>
   </div>
