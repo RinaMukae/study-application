@@ -13,6 +13,20 @@ router.get("/", function(req, res) {
   });
 });
 
+router.post("/", function(req, res) {
+  lists.findAll({
+    order: [['id', 'ASC']]
+  }).then((lists) =>{
+  res.render("readtest", {
+    lists: lists
+    });
+  });
+});
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+
+GLOBAL.document = new JSDOM().window.document;
+
 
 
 
