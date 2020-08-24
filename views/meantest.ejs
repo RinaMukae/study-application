@@ -10,62 +10,57 @@
   <div class="wrapper">
   <div style ="text-align: center;">
     <h1>四字熟語意味テスト</h1>
-    <h2>適切な意味を選びましょう</h2><br><h3>
-    <p></p>
-<% for (var i=0; i < 10; i++) { %>
-  <form action="readtest" method="POST" id="question">
-    <% var a = Math.floor( Math.random() * (1,133))%>
-    <% var b = Math.floor( Math.random() * (1,133))%>
-    <% if(a === b){%>
-      <% var b = Math.floor( Math.random() * (1,133))%>
-    <% }%>
-    <% var c = Math.floor( Math.random() * (1,133))%>
-    <% if (a != c && b != c){%>
-      
-    <% }else{%>
-      <% var c = Math.floor( Math.random() * (1,133))%>
-    <% }%>
-    <% var d = Math.floor( Math.random() * (1,133))%>
-    <% if (a != d && b != d && c != d){%>
-      
-    <% }else{%>
-      <% var d = Math.floor( Math.random() * (1,133))%>
-    <% }%>
+    <h2>適切な意味を選びましょう</h2><br>
+<form action="readtest" method="POST" id="question">
+  <% var a = Math.floor( Math.random() * (1,134))%>
+  <% var b = Math.floor( Math.random() * (1,134))%>
+  <% if(a === b){%>
+  <% var b = Math.floor( Math.random() * (1,134))%>
+  <% }%>
+  <% var c = Math.floor( Math.random() * (1,134))%>
+  <% if (a != c && b != c){%>    
+  <% }else{%>
+    <% var c = Math.floor( Math.random() * (1,134))%>
+  <% }%>
+  <% var d = Math.floor( Math.random() * (1,134))%>
+  <% if (a != d && b != d && c != d){%>    
+  <% }else{%>
+    <% var d = Math.floor( Math.random() * (1,134))%>
+  <% }%>
 
-    <% array = new Array(a, b, c, d)%>
-    <!–配列をシャッフル->
-    <% function shuffle(array) {%>
-      <% for (let i = array.length - 1; i >= 0; i--) {%>
-        <% let rand = Math.floor(Math.random() * (i + 1));%>
-        <!– 配列の数値を入れ替える->
-        <% [array[i], array[rand]] = [array[rand], array[i]]%>
-     <% }%>
-      <% return array;%>
+  <% array = new Array(a, b, c, d)%>
+  <!--配列をシャッフル-->
+  <% function shuffle(array) {%>
+    <% for (let i = array.length - 1; i >= 0; i--) {%>
+      <% let rand = Math.floor(Math.random() * (i + 1));%>
+      <!--配列の数値を入れ替える--> 
+      <% [array[i], array[rand]] = [array[rand], array[i]]%>
     <% }%>
-    <% array = shuffle(array);%>
+  <% return array;%>
+  <% }%>
+  <% array = shuffle(array);%>
 
-    <%= i+1%>問目
+    <%= question%>問目
     <h2><%= lists[a].jukugo%></h2>
     <h3>(1)<%= lists[array[0]].mean%></h3>
     <h3>(2)<%= lists[array[1]].mean%></h3>
     <h3>(3)<%= lists[array[2]].mean%></h3>
     <h3>(4)<%= lists[array[3]].mean%></h3>
-    <input type="button" id ="button1" value= "1" class="btn-square-shadow" onClick="check1();">
-    <input type="button" id ="button2" value= "2" class="btn-square-shadow" onClick="check2();">
-    <input type="button" id ="button3" value= "3" class="btn-square-shadow" onClick="check3();">
-    <input type="button" id ="button4" value= "4" class="btn-square-shadow" onClick="check4();">
-
   </form>
-  <% function check(){%>
-    <% if (list[a].mean === lists[array[0]].mean){%>
-      <h2>正解</h2>
-    <% }else{%>
-      <h2>不正解</h2>
+
+  <% var num = 0 %>
+  <% if(typeof correct !== 'undefined'){ %>
+    <% num = correct %>
+  <% } %>
+
+  <% for (var i=1; i < 5; i++) {%>
+    <% if (lists[a].mean === lists[array[i-1]].mean){%>
+      <a href="/correct?question=<%= question+1 %>&correct=<%= num+1 %>&list=<%= a+1 %>" class="btn-square-shadow"><%= i%></a>
+    <% } else{%>
+      <a href="/incorrect?question=<%= question+1 %>&correct=<%= num %>&list=<%= a+1 %>" class="btn-square-shadow"><%= i%></a>
     <% }%>
   <% }%>
-<% }%>  
 
-  <a href="/" class="btn-square-shadow">もどる</a>
 </div>
 </body>
 </html>
