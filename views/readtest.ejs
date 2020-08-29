@@ -10,31 +10,29 @@
   <div class="wrapper">
   <div style ="text-align: center;">
     <h1>四字熟語読みテスト</h1>
-    <h2>読みをひらがなで入力しましょう</h2><br>
-    
-
-  <form action="/readtest" method="post">
-    <% var b = Math.floor( Math.random() * (0,9)) %>
-    <% var c = Math.floor( Math.random() * (0,1)) %>
-    <% var a = c*100 + b*10 + Number(question) %>  
-    <% var num = 0 %>
-    <% if(typeof correct !== 'undefined'){ %>
-      <% num = correct %>
-    <% } %>
-
-    <h2><%= question %>問目</h2>
-    <h2><%= lists[a].jukugo %></h2>
-	  <h3>答え</h3>
-    <input type="text" value="" name="text">
-    <input type="hidden" value="<%= lists[a].read %> " name="read">
-    <input type="hidden" value="<%= question %> " name="question">
-    <input type="hidden" value="<%= a+1 %> " name="index">
-    <input type="hidden" value="<%= num %> " name="correct">
-    <br>  
-    
-    <input type="submit" value="決定" class="btn-square-shadow">
+    <h2>読みをひらがなで入力しましょう</h2><br><h3>
+    <p></p>
+<% for (var i=0; i < 10; i++) { %>
+  <form action="readtest" method="POST" id="question">
+    <% var a = Math.floor( Math.random() * (1))%>
+    <% var b = Math.floor( Math.random() * (0,9))%>
+    <%= i+1%>問目
+    <h2><%= lists[a*100 + b*10 +i].jukugo%></h2>
+	  答え
+    <input id="textBox" type="text" value=" " ></p>
+    <input type="button" id ="form-button" value="決定" class="btn-square-shadow" onClick="check();">
   </form>
-  </div>
-  </div>
+  <% function check(){%>
+    <% var c = document.forms.question%>
+    <% if (c == lists[a*100 + b*10 +i].read){%>
+      <h2>正解</h2>
+    <% }else{%>
+      <h2>不正解</h2>
+    <% }%>
+  <% }%>
+<% }%>  
+
+  <a href="/" class="btn-square-shadow">もどる</a>
+</div>
 </body>
 </html>

@@ -24,6 +24,7 @@ router.get("/", function(req, res) {
         }
       }
     }
+ 
     
     res.render("dictionary", {
       list: result,
@@ -35,7 +36,6 @@ router.get("/", function(req, res) {
   });
 
 });
-
 
 
 

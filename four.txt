@@ -358,7 +358,7 @@ INSERT INTO lists (ID, jukugo, read, mean) VALUES
 INSERT INTO lists (ID, jukugo, read, mean) VALUES
     ('43','急転直下','きゅうてんちょっか','行きづまっていたことが、一気に解決すること');
 INSERT INTO lists (ID, jukugo, read, mean) VALUES
-    ('44','器用貧乏','きようびんぼう','器用な人は、かえってほかの人に利用されたり１つのことに集中できなくて不利なこと');
+    ('44','器用貧乏','きようびんぼう','器用なひ人は、かえってほかの人に利用されたり１つのことに集中できなくて不利なこと');
 INSERT INTO lists (ID, jukugo, read, mean) VALUES
     ('45','興味津々','きょうみしんしん','後から後から興味がわいくる様子のこと');
 INSERT INTO lists (ID, jukugo, read, mean) VALUES
@@ -426,11 +426,11 @@ INSERT INTO lists (ID, jukugo, read, mean) VALUES
 INSERT INTO lists (ID, jukugo, read, mean) VALUES
     ('77','森羅万象','しんらばんしょう','この世界にそんざいする、ありとあらゆるもののこと');
 INSERT INTO lists (ID, jukugo, read, mean) VALUES
-    ('78','晴耕雨読','せいこううどく','心おだやかに暮らすこと、晴れた日には田んぼをたがやし、雨の日には家に引きこもって読書をすること');
+    ('78','晴耕雨読','せいこううどく','何かにわずらわされたりせず、思いのままにのんびりとした生活を送ること');
 INSERT INTO lists (ID, jukugo, read, mean) VALUES
     ('79','正々堂々','せいせいどうどう','ひきょうなことをせず、正しくしてどうどうとして態度をとること');
 INSERT INTO lists (ID, jukugo, read, mean) VALUES
-    ('80','青天白日','せいてんはくじつ','何かにわずらわされたりせず、思いのままにのんびりとした生活を送ること心おだやかに暮らすこと');
+    ('80','青天白日','せいてんはくじつ','心おだやかに暮らすこと、晴れた日には田んぼをたがやし、雨の日には家に引きこもって読書をすること');
 INSERT INTO lists (ID, jukugo, read, mean) VALUES
     ('81','絶体絶命','ぜったいぜつめい','逃げることのできない、さしせまった立場のこと');
 INSERT INTO lists (ID, jukugo, read, mean) VALUES
@@ -486,7 +486,7 @@ INSERT INTO lists (ID, jukugo, read, mean) VALUES
 INSERT INTO lists (ID, jukugo, read, mean) VALUES
     ('107','美辞麗句','びじれいく','うわべだけきれいにかざった聞いていて気分が良いが内容がない言葉のこと');
 INSERT INTO lists (ID, jukugo, read, mean) VALUES
-    ('108','百発尺中','ひゃっぱつひゃくちゅう','予想していたこと、計画していたことなどがすべて当たること');
+    ('108','百発尺中','ひゃっぱつしゃくちゅう','予想していたこと、計画していたことなどがすべて当たること');
 INSERT INTO lists (ID, jukugo, read, mean) VALUES
     ('109','不言実行','ふげんじっこう','あれこれ言わずに、やることをだまって実行すること');
 INSERT INTO lists (ID, jukugo, read, mean) VALUES
