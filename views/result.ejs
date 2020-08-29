@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/public/stylesheets/main.css">
+  <title>四字熟語ドリル</title>
 </head>
 <body>
-  <h1>フォームから送信された値</h1>
-  <table>
-    <tr>
-      <th>項目</th>
-      <th>値</th>
-    </tr>
-    <tr>
-      <td><%= username %></td>
-      <td><%= message %></td>
-    </tr>
-  </table>
-  
+  <div class="wrapper">
+  <div style ="text-align: center;">
+    <h1>結果</h1>
+    <h2><%= question%>問中<%= correct%>問正解</h2>
+    <% if (correct == 10){%>
+        <h3>全問正解おめでとう</h3>
+    <% }else if(7 <= correct <= 9){%>
+        <h3>全問正解目指してがんばりましょう</h3>
+    <% }else if(4 <= correct <= 6){%>
+        <h3>くり返し説いてみましょう</h3>
+    <% }else{%>
+        <h3>もっとがんばりましょう</h3>
+    <% }%>  
+    <a href="/" class="btn-square-shadow">もどる</a> 
+</div>
 </body>
 </html>
