@@ -16,10 +16,10 @@
 <h2><p><%= list.jukugo%></p></h2>
 <h2><p><%= list.mean%></p></h2>
 <p><img src="/public/image/<%= list.id%>.jpg"></p>
-<% if (question === 11){%>
+<% if (Number(question) === 11){%>
   <a href="/result?question=<%= question %>&correct=<%= correct %>" class="btn-square-shadow">結果</a>
 <% }else{%>   
-<a href="/meantest?question=<%= question %>&correct=<%= correct %>" class="btn-square-shadow">つぎへ</a>
+  <a href="/meantest?question=<%= question %>&correct=<%= correct %>" class="btn-square-shadow">つぎへ</a>
 <% }%>
   </div>
   </div>
