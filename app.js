@@ -22,11 +22,8 @@ var raRouter = require('./routes/ra');
 var dictionaryRouter = require('./routes/dictionary');
 var meantestRouter = require('./routes/meantest');
 var readtestRouter = require('./routes/readtest');
-var correctRouter = require('./routes/correct');
-var incorrectRouter = require('./routes/incorrect');
-var readcorrectRouter = require('./routes/readcorrect');
-var readincorrectRouter = require('./routes/readincorrect');
-var resultRouter = require('./routes/result');
+
+
 
 var app = express();
 
@@ -59,11 +56,6 @@ app.use('/ra', raRouter);
 app.use('/dictionary', dictionaryRouter);
 app.use('/readtest', readtestRouter);
 app.use('/meantest', meantestRouter);
-app.use('/correct', correctRouter);
-app.use('/incorrect', incorrectRouter);
-app.use('/readcorrect', readcorrectRouter);
-app.use('/readincorrect', readincorrectRouter);
-app.use('/result', resultRouter);
 
 var server = http.createServer(app);
 var port = 8000;
