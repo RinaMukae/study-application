@@ -12,7 +12,10 @@
     <h1>四字熟語意味テスト</h1>
     <h2>適切な意味を選びましょう</h2><br>
 <form action="readtest" method="POST" id="question">
-  <% var a = Math.floor( Math.random() * (1,134))%>
+  <% var e = Math.floor( Math.random() * (0,9)) %>
+  <% var d = Math.floor( Math.random() * (0,1)) %>
+  
+  <% var a = d*100 + e*10 + Number(question) %>  
   <% var b = Math.floor( Math.random() * (1,134))%>
   <% if(a === b){%>
   <% var b = Math.floor( Math.random() * (1,134))%>
@@ -40,7 +43,7 @@
   <% }%>
   <% array = shuffle(array);%>
 
-    <%= question%>問目
+    <h2><%= question%>問目</h2>
     <h2><%= lists[a].jukugo%></h2>
     <h3>(1)<%= lists[array[0]].mean%></h3>
     <h3>(2)<%= lists[array[1]].mean%></h3>

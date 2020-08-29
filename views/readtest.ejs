@@ -14,13 +14,15 @@
     
 
   <form action="/readtest" method="post">
-    <% var a = Math.floor( Math.random() * (1,134)) %>    
+    <% var b = Math.floor( Math.random() * (0,9)) %>
+    <% var c = Math.floor( Math.random() * (0,1)) %>
+    <% var a = c*100 + b*10 + Number(question) %>  
     <% var num = 0 %>
     <% if(typeof correct !== 'undefined'){ %>
       <% num = correct %>
     <% } %>
 
-    <%= question %>問目
+    <h2><%= question %>問目</h2>
     <h2><%= lists[a].jukugo %></h2>
 	  <h3>答え</h3>
     <input type="text" value="" name="text">
