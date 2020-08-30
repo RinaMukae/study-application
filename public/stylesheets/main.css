@@ -36,3 +36,9 @@ h1 {
   margin-bottom: 50px;
   margin-top: 50px;
 }
+
+figure {
+	float: left;
+	margin: 0 -450px 0px 0;
+	width: 30%;
+}

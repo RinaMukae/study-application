@@ -9,20 +9,19 @@
 <body>
   <div class="wrapper">
   <div style ="text-align: center;">
-    <a href="/"><img src="/public/image/menu.jpg" alt="もどる" width="200" height="100"></a>
-    <div align ="center">
+    <figure><a href="/"><img src="/public/image/menu.jpg" alt="もどる" width="200" height="100"  align="middle"></a></figure>
     <h1>不正解</h1>
   
-  <h4><%= list.read%></h4>
-  <h2><p><%= list.jukugo%></p></h2>
-  <h2><p><%= list.mean%></p></h2>
-  <p><img src="/public/image/<%= list.id%>.jpg"></p>
+    <h4><%= list.read%></h4>
+    <h2><p><%= list.jukugo%></p></h2>
+    <h2><p><%= list.mean%></p></h2>
+    <p><img src="/public/image/<%= list.id%>.jpg"></p>
   <% if (Number(question) === 11){%>
     <a href="/result?question=<%= question %>&correct=<%= correct %>" class="btn-square-shadow">結果</a>
 <% }else{%>   
     <a href="/meantest?question=<%= question %>&correct=<%= correct %>" class="btn-square-shadow">つぎへ</a>
 <% }%>
-    </div>
+  
   </div>
   </div>
 </body>
