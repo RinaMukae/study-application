@@ -11,14 +11,18 @@
   <div style ="text-align: center;">
     <h1>結果</h1>
     <h2><%= question%>問中<%= correct%>問正解</h2>
-    <% if (correct == 10){%>
+    <% if (Number(correct) === 10){%>
         <h3>全問正解おめでとう</h3>
-    <% }else if(7 <= correct <= 9){%>
+        <p><img src="/public/image/result1.jpg"></p>
+    <% }else if(Number(correct) > 6){%>
         <h3>全問正解目指してがんばりましょう</h3>
-    <% }else if(4 <= correct <= 6){%>
-        <h3>くり返し説いてみましょう</h3>
+        <p><img src="/public/image/result2.jpg"></p>
+    <% }else if(Number(correct) > 3){%>
+        <h3>くり返し解いてみましょう</h3>
+        <p><img src="/public/image/result4.jpg"></p>
     <% }else{%>
         <h3>もっとがんばりましょう</h3>
+        <p><img src="/public/image/result3.jpg"></p>
     <% }%>  
     <a href="/" class="btn-square-shadow">もどる</a> 
 </div>

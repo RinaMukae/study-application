@@ -9,9 +9,10 @@
 <body>
   <div class="wrapper">
   <div style ="text-align: center;">
+    <a href="/"><img src="/public/image/menu.jpg" alt="もどる" width="200" height="100"></a>
     <h1>四字熟語意味テスト</h1>
     <h2>適切な意味を選びましょう</h2><br>
-<form action="readtest" method="POST" id="question">
+
   <% var e = Math.floor( Math.random() * (0,9)) %>
   <% var d = Math.floor( Math.random() * (0,1)) %>
   
@@ -49,20 +50,36 @@
     <h3>(2)<%= lists[array[1]].mean%></h3>
     <h3>(3)<%= lists[array[2]].mean%></h3>
     <h3>(4)<%= lists[array[3]].mean%></h3>
-  </form>
+  
 
   <% var num = 0 %>
   <% if(typeof correct !== 'undefined'){ %>
     <% num = correct %>
   <% } %>
 
+  <div style="display: inline-flex;">
   <% for (var i=1; i < 5; i++) {%>
     <% if (lists[a].mean === lists[array[i-1]].mean){%>
-      <a href="/correct?question=<%= question+1 %>&correct=<%= num+1 %>&list=<%= a+1 %>" class="btn-square-shadow"><%= i%></a>
+      <!-- <a href="/correct?question=<%= question+1 %>&correct=<%= num+1 %>&list=<%= a+1 %>" class="btn-square-shadow"><%= i%></a> -->
+      <form action="/correct" method="post">
+        <input type="hidden" value="<%= question %> " name="question">
+        <input type="hidden" value="<%= a+1 %> " name="index">
+        <input type="hidden" value="<%= num %> " name="correct">
+        
+        <input type="submit" value="<%= i%>" class="btn-square-shadow">
+      </form>
     <% } else{%>
-      <a href="/incorrect?question=<%= question+1 %>&correct=<%= num %>&list=<%= a+1 %>" class="btn-square-shadow"><%= i%></a>
-    <% }%>
+      <!-- <a href="/incorrect?question=<%= question+1 %>&correct=<%= num %>&list=<%= a+1 %>" class="btn-square-shadow"><%= i%></a> -->
+      <form action="/incorrect" method="post">
+        <input type="hidden" value="<%= question %> " name="question">
+        <input type="hidden" value="<%= a+1 %> " name="index">
+        <input type="hidden" value="<%= num %> " name="correct">
+        
+        <input type="submit" value="<%= i%>" class="btn-square-shadow">
+      </form>
+      <% }%>
   <% }%>
+  </div>
 
 </div>
 </body>

@@ -20,8 +20,21 @@ router.get("/", function(req, res) {
 
 });
 
-
-
+router.post("/", function(req, res){
+  var num = Number(req.body.index);
+  lists.findOne({
+    where: {
+      id: num
+    },
+    order: [['id', 'ASC']]
+  }).then((list) => {
+    res.render("incorrect", {
+      question: Number(req.body.question)+1,
+      list: list,
+      correct: Number(req.body.correct)
+    });
+  });
+});
 
 
 module.exports = router;
