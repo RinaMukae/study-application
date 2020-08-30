@@ -1,0 +1,8 @@
+{
+    "name": "study-application",
+    "description": "To study four character idiomatic compounds",
+    "repository": "https://github.com/RinaMukae/study-application",
+    "logo": "",
+    "keywords": ["node"],
+    "image": "heroku/nodejs"
+  }

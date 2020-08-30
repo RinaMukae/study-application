@@ -66,7 +66,7 @@ app.use('/incorrect', incorrectRouter);
 app.use('/result', resultRouter);
 
 var server = http.createServer(app);
-var port = 8000;
+var port = process.env.PORT || 8000;
 server.listen(port);
 
 console.info('Listening to ' + port);
