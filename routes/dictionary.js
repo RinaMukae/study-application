@@ -17,7 +17,7 @@ router.get("/", function(req, res) {
                   ['ha','は','ひ','ふ','へ','ほ','ば','び','ぶ','べ','ぼ','ぱ','ぴ','ぷ','ぺ','ぽ'],
                   ['ma','ま','み','む','め','も'],['ya','や','ゆ','よ'],['ra','ら','り','る','れ','ろ']];
     var count = req.query.id;
-    for (i = 0; i < 8; i++){
+    for (i = 0; i < 9; i++){
       for (j = 1; j < kanaArr[i].length; j++){
         if (kanaArr[i][j] == flag){
           var gyou = kanaArr[i][0];
